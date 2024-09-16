@@ -64,18 +64,69 @@ const { title } = Astro.props;
 		<div class="banner">
 			<div class="menu-search">
 				<menu>
-					<a href="#">Tu tienda</a>
-					<a href="#">Nuevo y destacable</a>
-					<a href="#">categorías</a>
-					<a href="#">Tienda de puntos</a>
-					<a href="#">Noticias</a>
-					<a href="#">Laboratorios</a>
-					<input type="search" id="buscar" placeholder="buscar" />
+					<li><a href="#">Tu tienda</a></li>
+					<li><a href="#">Nuevo y destacable</a></li>
+					<li><a href="#">categorías</a></li>
+					<li><a href="#">Tienda de puntos</a></li>
+					<li><a href="#">Noticias</a></li>
+					<li><a href="#">Laboratorios</a></li>
+					<!-- <li><input type="search" id="buscar" placeholder="buscar" /></li> -->
 				</menu>
 			</div>
+			<div class="search">
+				<input class="ss" type="search" placeholder="buscar">
+				<div class="img-search">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+					  </svg>					  
+				</div>
+			</div>
+			
 		</div>
 		<div class="left-menu"></div>
-		<div class="banner2 container"></div>
+
+		<div id="conte-ItemCarousel">
+			<div class="item-carousel" id="itemCarousel-1">
+				<div class="card-carousel" id="cardCarousel-1">
+					A
+				</div>
+				<div class="arrow-carousel">
+					<a href="#itemCarousel-3">
+						<i>I</i>
+					</a>
+					<a href="#itemCarousel-2">
+						<i>D</i>
+					</a>
+				</div>
+			</div>
+			<div class="item-carousel" id="itemCarousel-2">
+				<div class="card-carousel" id="cardCarousel-2">
+					B
+				</div>
+				<div class="arrow-carousel">
+					<a href="#itemCarousel-1">
+						<i>I</i>
+					</a>
+					<a href="#itemCarousel-3">
+						<i>D</i>
+					</a>
+				</div>
+			</div>
+			<div class="item-carousel" id="itemCarousel-3">
+				<div class="card-carousel" id="cardCarousel-3">
+					C
+				</div>
+				<div class="arrow-carousel">
+					<a href="#itemCarousel-2">
+						<i>I</i>
+					</a>
+					<a href="#itemCarousel-1">
+						<i>D</i>
+					</a>
+				</div>
+			</div>
+		</div>
+	
 
 		<div class="banner3"></div>
 	</body>
@@ -85,6 +136,7 @@ const { title } = Astro.props;
 	body {
 		padding: 0;
 		margin: 0;
+		box-sizing: border-box;
 	}
 
 	header {
@@ -169,23 +221,94 @@ const { title } = Astro.props;
 	.banner {
 		background: orange;
 		height: 360px;
+		display: flex;
+		padding-left: 350px;
 	}
 	
-	
+
 	.menu-search {
-		display: flex;
-		margin: 0 20% 0 20%;
-		background-color: aqua;
-		height: 60px;
+		margin-top: 20px;
+		padding-right: 20px;
+		height: 40px;
 		align-items: center;
 		justify-content: center;
-		gap: 20px;
+		background: aquamarine;
+		font-family: sans-serif;
 	}
 
-	.banner2 {
+	.menu-search a{
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 14px;
+		color: #fff;
+		
+	}
+
+	.menu-search li{
+		margin-left: 10px;
+		display: inline-block;	
+	}
+
+	.search{
+		margin-top: 20px;
+		display: flex;
+		height: 40px;
+		justify-content: center;
+		align-items: center;
+		background: #fff;
+		float:right;
+		width: 250px;
+	}
+	
+	.img-search {
+		width: 20px;
+		height: 20px;
+		border-radius: 1px;
+		padding: 1px;
+		background-color: #161d24;
+	}
+
+	#conte-ItemCarousel {
+		border: 5px solid black;
+		height: 200px;
+		width: 60%;
+		overflow: hidden;
+		float: right;
+	}
+
+
+	.item-carousel {
+		border: 1px solid black;
+		height: 100%;
 		position: relative;
-		background: purple;
-		height: 240px;
+	}
+	
+	.card-carousel {
+		background-color: #789806;
+		height: 100%;
+	}
+	
+	.arrow-carousel {
+		position: absolute;
+		top:0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		/* padding: 20px; */
+	}
+
+	#cardCarousel-1 {
+		background-color: #c12626;
+	}
+
+	#cardCarousel-2 {
+		background-color: rgb(237, 237, 22);
+	}
+
+	#cardCarousel-3 {
+		background-color: #0e78e2;
 	}
 
 	.left-menu {
