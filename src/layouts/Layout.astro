@@ -16,20 +16,20 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="p-0 m-0 ">
 		<!-- <slot /> -->
-		<header>
-			<div class="container">
-				<div class="flex-menu">
-					<img
+		<header class="h-20 bg-[#161d24]">
+			<div class="container max-w-[1200px] mx-auto">
+				<div class="flex-menu flex items-center w-[60%] float-left h-20 text-[#f6f2f2] font-sans uppercase top-0">
+					<img class="w-40"
 						src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
 						alt=""
 					/>
 					<menu>
-						<li><a href="#">Tienda</a></li>
-						<li><a href="#">Comunidad</a></li>
-						<li><a href="#">Acerca de</a></li>
-						<li><a href="#">Soporte</a></li>
+						<li><a class="hover:text-white text-[#d6c9c9] font-semibold no-underline" href="#">Tienda</a></li>
+						<li><a class="hover:text-white text-[#d6c9c9] font-semibold no-underline" href="#">Comunidad</a></li>
+						<li><a class="hover:text-white text-[#d6c9c9] font-semibold no-underline" href="#">Acerca de</a></li>
+						<li><a class="hover:text-white text-[#d6c9c9] font-semibold no-underline" href="#">Soporte</a></li>
 					</menu>
 				</div>
 				<div class="menu-right">
@@ -62,7 +62,7 @@ const { title } = Astro.props;
 			</div>
 		</header>
 		<div class="banner">
-			<div class="menu-search">
+			<!-- <div class="menu-search">
 				<menu>
 					<li><a href="#">Tu tienda</a></li>
 					<li><a href="#">Nuevo y destacable</a></li>
@@ -70,7 +70,7 @@ const { title } = Astro.props;
 					<li><a href="#">Tienda de puntos</a></li>
 					<li><a href="#">Noticias</a></li>
 					<li><a href="#">Laboratorios</a></li>
-					<!-- <li><input type="search" id="buscar" placeholder="buscar" /></li> -->
+					
 				</menu>
 			</div>
 			<div class="search">
@@ -80,12 +80,14 @@ const { title } = Astro.props;
 						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
 					  </svg>					  
 				</div>
-			</div>
-			
+			</div> -->
 		</div>
+
 		<div class="left-menu"></div>
 
-		<div id="conte-ItemCarousel">
+		<div class="banner2 container max-w-[1200px] mx-auto"></div>
+
+		<!-- <div id="conte-ItemCarousel">
 			<div class="item-carousel" id="itemCarousel-1">
 				<div class="card-carousel" id="cardCarousel-1">
 					A
@@ -125,31 +127,64 @@ const { title } = Astro.props;
 					</a>
 				</div>
 			</div>
-		</div>
-	
+		</div> -->
 
 		<div class="banner3"></div>
+
+		<div
+			class="group items-center hover:cursor-pointer duration-300 transition-colors hover:bg-blue-600 rounded py-2 px-4 text-white inline-flex bg-blue-500"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="size-4 mr-1 mt-1 group-hover:animate-spin"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+				></path>
+			</svg>
+
+			Presióname!
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="size-4 mt-[4px] ml-1"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+			</svg>
+		</div>
 	</body>
 </html>
 <style>
-	html,
-	body {
+	/* html, */
+	/* body {
 		padding: 0;
 		margin: 0;
 		box-sizing: border-box;
-	}
+	} */
 
-	header {
+	/* header {
 		height: 80px;
 		background: #161d24;
-	}
+	} */
 
-	.container {
+	/* .container {
 		max-width: 1200px;
 		margin: 0 auto;
-	}
+	} */
 
-	.flex-menu {
+	/* .flex-menu {
 		display: flex;
 		height: 80px;
 		width: 60%;
@@ -158,21 +193,21 @@ const { title } = Astro.props;
 		color: #f6f2f2;
 		font-family: sans-serif;
 		text-transform: uppercase;
-	}
+	} */
 
-	.flex-menu a {
+	/* .flex-menu a {
 		color: #d6c9c9;
 		font-weight: 600;
 		text-decoration: none;
-	}
+	} */
 
-	.flex-menu a:hover {
+	/* .flex-menu a:hover {
 		color: #fff;
-	}
+	} */
 
-	.flex-menu img {
+	/* .flex-menu img {
 		width: 160px;
-	}
+	} */
 
 	.flex-menu li {
 		margin-left: 10px;
@@ -183,7 +218,7 @@ const { title } = Astro.props;
 	.menu-right {
 		color: #d6c9c9;
 		font-family: sans-serif;
-		float: right;
+		float: left;
 		margin-top: 8px;
 		width: 40%;
 	}
@@ -224,7 +259,11 @@ const { title } = Astro.props;
 		display: flex;
 		padding-left: 350px;
 	}
-	
+
+	.banner2 {
+		background-color: #c12626;
+		height: 240px;
+	}
 
 	.menu-search {
 		margin-top: 20px;
@@ -236,30 +275,29 @@ const { title } = Astro.props;
 		font-family: sans-serif;
 	}
 
-	.menu-search a{
+	.menu-search a {
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 14px;
 		color: #fff;
-		
 	}
 
-	.menu-search li{
+	.menu-search li {
 		margin-left: 10px;
-		display: inline-block;	
+		display: inline-block;
 	}
 
-	.search{
+	.search {
 		margin-top: 20px;
 		display: flex;
 		height: 40px;
 		justify-content: center;
 		align-items: center;
 		background: #fff;
-		float:right;
+		float: right;
 		width: 250px;
 	}
-	
+
 	.img-search {
 		width: 20px;
 		height: 20px;
@@ -276,21 +314,20 @@ const { title } = Astro.props;
 		float: right;
 	}
 
-
 	.item-carousel {
 		border: 1px solid black;
 		height: 100%;
 		position: relative;
 	}
-	
+
 	.card-carousel {
 		background-color: #789806;
 		height: 100%;
 	}
-	
+
 	.arrow-carousel {
 		position: absolute;
-		top:0;
+		top: 0;
 		height: 100%;
 		width: 100%;
 		display: flex;
@@ -312,13 +349,14 @@ const { title } = Astro.props;
 	}
 
 	.left-menu {
+		float: left;
+		z-index: 1;
+		left: calc(((100% - 1200px) / 2) - 180px);
 		background: pink;
 		width: 180px;
 		height: 360px;
-		z-index: 10;
 		position: sticky;
 		top: 0;
-		left: -180px;
 	}
 
 	.banner3 {
