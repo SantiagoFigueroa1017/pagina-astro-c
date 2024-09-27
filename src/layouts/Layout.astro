@@ -16,32 +16,56 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="p-0 m-0 ">
+	<body class="p-0 m-0">
 		<!-- <slot /> -->
 		<header class="h-20 bg-[#161d24]">
 			<div class="container max-w-[1200px] mx-auto">
-				<div class="flex-menu flex items-center w-[60%] float-left h-20 text-[#f6f2f2] font-sans uppercase top-0">
-					<img class="w-40"
+				<div
+					class="flex-menu flex items-center w-[60%] float-left h-20 text-[#f6f2f2] font-sans uppercase top-0"
+				>
+					<img
+						class="w-40"
 						src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
 						alt=""
 					/>
 					<menu>
-						<li><a class="hover:text-white text-[#d6c9c9] font-semibold no-underline" href="#">Tienda</a></li>
-						<li><a class="hover:text-white text-[#d6c9c9] font-semibold no-underline" href="#">Comunidad</a></li>
-						<li><a class="hover:text-white text-[#d6c9c9] font-semibold no-underline" href="#">Acerca de</a></li>
-						<li><a class="hover:text-white text-[#d6c9c9] font-semibold no-underline" href="#">Soporte</a></li>
+						<li class="ml-[10px] list-none inline-block">
+							<a
+								class="hover:text-white text-[#d6c9c9] font-semibold no-underline"
+								href="#">Tienda</a>
+						</li>
+						<li class="ml-[10px] list-none inline-block">
+							<a
+								class="hover:text-white text-[#d6c9c9] font-semibold no-underline"
+								href="#">Comunidad</a>
+						</li>
+						<li class="ml-[10px] list-none inline-block">
+							<a
+								class="hover:text-white text-[#d6c9c9] font-semibold no-underline"
+								href="#">Acerca de</a>
+						</li>
+						<li class="ml-[10px] list-none inline-block">
+							<a
+								class="hover:text-white text-[#d6c9c9] font-semibold no-underline"
+								href="#">Soporte</a>
+						</li>
 					</menu>
 				</div>
-				<div class="menu-right">
+				<div
+					class="menu-right text-[#d6c9c9] font-sans float-left mt-2 w-2/5"
+				>
 					<menu>
-						<a href="#" class="btn-download">
+						<a
+							href="#"
+							class="btn-download mx-2 my-0 text-[#d6c9c9] no-underline hover:text-white bg-[#789806] py-[6px] px-3 font-sans inline-flex gap-2 items-center hover:bg-[#2ead2e]"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke-width="1.5"
 								stroke="currentColor"
-								class="size-6"
+								class="size-[18px]"
 							>
 								<path
 									stroke-linecap="round"
@@ -52,40 +76,92 @@ const { title } = Astro.props;
 							Instalar Steam
 						</a>
 
-						<a href="#">Iniciar Sesión</a>
+						<a
+							href="#"
+							class="mx-2 my-0 text-[#d6c9c9] no-underline hover:text-white"
+							>Iniciar Sesión</a
+						>
 
 						|
 
-						<a href="#">Idioma</a>
+						<a
+							href="#"
+							class="mx-2 my-0 text-[#d6c9c9] no-underline hover:text-white"
+							>Idioma</a
+						>
 					</menu>
 				</div>
 			</div>
 		</header>
-		<div class="banner">
-			<!-- <div class="menu-search">
+		<div class="banner bg-orange-500 h-[360px] pl-[350px]">
+			<div
+				class="menu-search mt-5 pr-5 h-10 flex items-center justify-center bg-cyan-200 font-sans float-left"
+			>
 				<menu>
-					<li><a href="#">Tu tienda</a></li>
-					<li><a href="#">Nuevo y destacable</a></li>
-					<li><a href="#">categorías</a></li>
-					<li><a href="#">Tienda de puntos</a></li>
-					<li><a href="#">Noticias</a></li>
-					<li><a href="#">Laboratorios</a></li>
-					
+					<li class="ml-[10px] inline-block">
+						<a
+							class="no-underline text-[#fff] size-[14px] font-semibold"
+							href="#">Tu tienda</a>
+					</li>
+					<li class="ml-[10px] inline-block">
+						<a
+							class="no-underline text-[#fff] size-[14px] font-semibold"
+							href="#">Nuevo y destacable</a>
+					</li>
+					<li class="ml-[10px] inline-block">
+						<a
+							class="no-underline text-[#fff] size-[14px] font-semibold"
+							href="#">Categorías</a>
+					</li>
+					<li class="ml-[10px] inline-block">
+						<a
+							class="no-underline text-[#fff] size-[14px] font-semibold"
+							href="#">Tienda de puntos</a>
+					</li>
+					<li class="ml-[10px] inline-block">
+						<a
+							class="no-underline text-[#fff] size-[14px] font-semibold"
+							href="#">Noticias</a>
+					</li>
+					<li class="ml-[10px] inline-block">
+						<a
+							class="no-underline text-[#fff] size-[14px] font-semibold"
+							href="#">Laboratorios</a>
+					</li>
 				</menu>
 			</div>
-			<div class="search">
-				<input class="ss" type="search" placeholder="buscar">
-				<div class="img-search">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-					  </svg>					  
+			<div class="menu border border-orange-950 inline-flex mt-5">
+				<div class="flex h-10 justify-center items-center bg-[#fff] w-[250px]">
+					<input class="outline-none" type="search" placeholder="buscar" />
+					<div class="img-search">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-5 h-5 rounded-[1px] p-[1px] bg-[#161d24]"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+							></path>
+						</svg>
+					</div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 
-		<div class="left-menu"></div>
+		<div
+			class="left-menu float-left z-[1] bg-pink-500 w-[180px] h-[360px] sticky top-0 left-[calc(((100%-1200px)/2)-180px)]"
+		>
+		</div>
 
-		<div class="banner2 container max-w-[1200px] mx-auto"></div>
+		<div
+			class="banner2 container max-w-[1200px] mx-auto bg-purple-500 h-[240px]"
+		>
+		</div>
 
 		<!-- <div id="conte-ItemCarousel">
 			<div class="item-carousel" id="itemCarousel-1">
@@ -93,10 +169,10 @@ const { title } = Astro.props;
 					A
 				</div>
 				<div class="arrow-carousel">
-					<a href="#itemCarousel-3">
+					<a href="javascript:void(0)">
 						<i>I</i>
 					</a>
-					<a href="#itemCarousel-2">
+					<a href="javascript:void(0)">
 						<i>D</i>
 					</a>
 				</div>
@@ -129,7 +205,7 @@ const { title } = Astro.props;
 			</div>
 		</div> -->
 
-		<div class="banner3"></div>
+		<div class="banner3 bg-teal-300 h-[1200px]"></div>
 
 		<div
 			class="group items-center hover:cursor-pointer duration-300 transition-colors hover:bg-blue-600 rounded py-2 px-4 text-white inline-flex bg-blue-500"
@@ -209,31 +285,31 @@ const { title } = Astro.props;
 		width: 160px;
 	} */
 
-	.flex-menu li {
+	/* .flex-menu li {
 		margin-left: 10px;
 		list-style: none;
 		display: inline-block;
-	}
+	} */
 
-	.menu-right {
+	/* .menu-right {
 		color: #d6c9c9;
 		font-family: sans-serif;
 		float: left;
 		margin-top: 8px;
 		width: 40%;
-	}
+	} */
 
-	.menu-right a {
+	/* .menu-right a {
 		margin: 0 8px;
 		color: #d6c9c9;
 		text-decoration: none;
-	}
+	} */
 
-	.menu-right a:hover {
+	/* .menu-right a:hover {
 		color: #fff;
-	}
+	} */
 
-	.btn-download {
+	/* .btn-download {
 		color: #fff;
 		background-color: #789806;
 		display: inline-block;
@@ -243,29 +319,29 @@ const { title } = Astro.props;
 		display: inline-flex;
 		gap: 8px;
 		align-items: center;
-	}
+	} */
 
-	.btn-download svg {
+	/* .btn-download svg {
 		width: 18px;
-	}
+	} */
 
-	.btn-download:hover {
-		background-color: rgb(46, 173, 46);
-	}
+	/* .btn-download:hover {
+		background-color: #2ead2e;
+	} */
 
-	.banner {
+	/* .banner {
 		background: orange;
 		height: 360px;
 		display: flex;
 		padding-left: 350px;
-	}
+	} */
 
-	.banner2 {
+	/* .banner2 {
 		background-color: #c12626;
 		height: 240px;
-	}
+	} */
 
-	.menu-search {
+	/* .menu-search {
 		margin-top: 20px;
 		padding-right: 20px;
 		height: 40px;
@@ -273,21 +349,21 @@ const { title } = Astro.props;
 		justify-content: center;
 		background: aquamarine;
 		font-family: sans-serif;
-	}
+	} */
 
-	.menu-search a {
+	/* .menu-search a {
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 14px;
 		color: #fff;
-	}
+	} */
 
-	.menu-search li {
+	/* .menu-search li {
 		margin-left: 10px;
 		display: inline-block;
-	}
+	} */
 
-	.search {
+	/* .search {
 		margin-top: 20px;
 		display: flex;
 		height: 40px;
@@ -296,16 +372,17 @@ const { title } = Astro.props;
 		background: #fff;
 		float: right;
 		width: 250px;
-	}
+	} */
 
-	.img-search {
+	/* .img-search {
 		width: 20px;
 		height: 20px;
 		border-radius: 1px;
 		padding: 1px;
 		background-color: #161d24;
-	}
+	} */
 
+	/*
 	#conte-ItemCarousel {
 		border: 5px solid black;
 		height: 200px;
@@ -333,7 +410,7 @@ const { title } = Astro.props;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		/* padding: 20px; */
+		
 	}
 
 	#cardCarousel-1 {
@@ -346,9 +423,9 @@ const { title } = Astro.props;
 
 	#cardCarousel-3 {
 		background-color: #0e78e2;
-	}
+	} */
 
-	.left-menu {
+	/* .left-menu {
 		float: left;
 		z-index: 1;
 		left: calc(((100% - 1200px) / 2) - 180px);
@@ -357,10 +434,10 @@ const { title } = Astro.props;
 		height: 360px;
 		position: sticky;
 		top: 0;
-	}
+	} */
 
-	.banner3 {
+	/* .banner3 {
 		background-color: turquoise;
 		height: 1200px;
-	}
+	} */
 </style>
